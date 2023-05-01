@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIV - Digital Identity Vault</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+            color: #333333;
+        }
+
+        header {
+            background-color: #000000;
+            padding: 20px 0;
+        }
+
+        header h1 {
+            color: #ffffff;
+            text-align: center;
+            font-size: 36px;
+        }
+
+        main {
+            padding: 40px;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 24px;
+            color: #000000;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: #333333;
+            font-weight: bold;
+        }
+
+        #timer {
+            font-size: 24px;
+            font-weight: bold;
+            color: #000000;
+            margin: 20px 0;
+            padding: 15px;
+            border: 2px solid #000000;
+            display: inline-block;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Digital Identity Vault</h1>
+    </header>
+    <main>
+        <h2>Révolutionnez le monde de la cybersécurité avec la blockchain et les NFT</h2>
+        <p>Les NFT (Non-Fungible Tokens) sont des actifs numériques uniques et sécurisés qui peuvent être utilisés pour stocker les informations d'identification sous forme cryptée.</p>
+        <p>Notre solution permet aux utilisateurs de contrôler l'accès à leurs informations personnelles en émettant des NFT à des tiers pour prouver leur identité ou leur propriété. Notre solution offre une alternative à la gestion d'identité traditionnelle, qui est vulnérable aux cyberattaques et aux violations de données.</p>
+        <p><a href="D (4).pdf" target="_blank">Cliquez ici pour consulter notre white paper</a></p>
+        <div id="timer"></div>
+        <script>
+    function countdown(endDate) {
+        let days, hours, minutes, seconds;
+        endDate = new Date(endDate).getTime();
+        if (isNaN(endDate)) {
+            return;
+        }
+        setInterval(calculate, 1000);
+
+        function calculate() {
+            let startDate = new Date();
+            startDate = startDate.getTime();
+            let timeRemaining = parseInt((endDate - startDate) / 1000);
+
+            if (timeRemaining >= 0) {
+                days = parseInt(timeRemaining / 86400);
+                timeRemaining = (timeRemaining % 86400);
+                hours = parseInt(timeRemaining / 3600);
+                timeRemaining = (timeRemaining % 3600);
+                minutes = parseInt(timeRemaining / 60);
+                timeRemaining = (timeRemaining % 60);
+                seconds = parseInt(timeRemaining);
+
+                document.getElementById("timer").innerHTML = "L'ICO aura lieu dans: " + days + " jours, " + hours + " heures, " + minutes + " minutes et " + seconds + " secondes";
+            } else {
+                document.getElementById("timer").innerHTML = "Le compte à rebours est terminé";
+            }
+        }
+    }
+    countdown('05/01/2024 00:00:00');
+</script>
